@@ -17,9 +17,11 @@ public class ManagerUS2 : MonoBehaviour {
 
     public void B_OpenDoor()
     {
+        //Play door opening animation
         doorAnim.SetBool("OpenDoor", true);
         AudioSource.PlayClipAtPoint(knobSound, Camera.main.transform.position);
         float animDelay = 1f;
+        //Let the door handle animation finish
         Invoke("PlayDoorOpenSound", knobSound.length + animDelay);
     }
 
